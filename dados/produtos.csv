@@ -1,0 +1,16 @@
+﻿ProdutoID,Nome,Categoria,Preço
+1,Notebook Dell,Informática,4200
+2,Notebook Lenovo,Informática,3900
+3,Mouse Gamer,Periféricos,180
+4,Teclado Mecânico,Periféricos,320
+5,Monitor 24,Monitores,1100
+6,Monitor 27,Monitores,1700
+7,SSD 1TB,Hardware,480
+8,HD 2TB,Hardware,420
+9,Headset Gamer,Áudio,350
+10,Webcam Full HD,Vídeo,270
+11,Impressora Epson,Escritório,980
+12,Cadeira Gamer,Móveis,1550
+13,Mesa Escritório,Móveis,870
+14,Microfone USB,Áudio,450
+15,Placa de Vídeo RTX,Hardware,5200
