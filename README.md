@@ -1,67 +1,69 @@
-# 📊 Pipeline ETL com Python, SQLite, Docker e Power BI
+# 📊 Pipeline ETL com Python, Docker e Power BI
 
-![Python](https://img.shields.io/badge/Python-3.11-blue)
-![Pandas](https://img.shields.io/badge/Pandas-ETL-green)
-![SQLite](https://img.shields.io/badge/SQLite-Database-lightgrey)
-![Docker](https://img.shields.io/badge/Docker-Container-blue)
-![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow)
-![Status](https://img.shields.io/badge/Status-Concluído-success)
+<p align="center">
 
----
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas)
+![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite)
+![Docker](https://img.shields.io/badge/Docker-Container-2496ED?style=for-the-badge&logo=docker)
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi)
+![GitHub](https://img.shields.io/badge/GitHub-Portfolio-181717?style=for-the-badge&logo=github)
 
-# 📌 Sobre o projeto
-
-Este projeto implementa um Pipeline ETL (Extract, Transform, Load) completo utilizando Python, simulando um ambiente de Engenharia de Dados.
-
-O pipeline gera dados fictícios, realiza validação, transformação, carga em banco de dados SQLite e produz relatórios analíticos. Os dados também são utilizados para construção de um dashboard interativo no Power BI.
+</p>
 
 ---
 
-# 🚀 Tecnologias
+## 📌 Sobre o Projeto
+
+Este projeto simula um processo completo de **ETL (Extract, Transform and Load)** utilizando Python.
+
+Os dados são gerados automaticamente, passam por validações, transformações e são armazenados em um banco SQLite. Em seguida, são utilizados para criação de dashboards profissionais no **Power BI**, permitindo análises comerciais e gerenciais.
+
+O projeto foi desenvolvido com foco em demonstrar conhecimentos de Engenharia de Dados, Análise de Dados e Business Intelligence.
+
+---
+
+# 🎯 Objetivos
+
+- Automatizar um pipeline ETL
+- Gerar dados fictícios realistas
+- Validar e transformar informações
+- Armazenar dados em banco SQLite
+- Gerar relatórios em Excel
+- Construir dashboards profissionais no Power BI
+- Containerizar a aplicação com Docker
+
+---
+
+# 🛠 Tecnologias Utilizadas
 
 - Python 3.11
 - Pandas
 - Faker
 - SQLite
-- Docker
+- OpenPyXL
 - XlsxWriter
-- Power BI
+- Docker
 - Git
 - GitHub
-
----
-
-# 🏗 Arquitetura
-
-```
-          Geração de Dados
-                 │
-                 ▼
-        CSV / Excel (Extract)
-                 │
-                 ▼
-     Limpeza e Transformação
-             (Pandas)
-                 │
-                 ▼
-        Banco SQLite (Load)
-                 │
-                 ▼
-      Relatórios Excel / CSV
-                 │
-                 ▼
-        Dashboard Power BI
-```
+- Power BI
 
 ---
 
 # 📂 Estrutura do Projeto
 
-```
-Pipeline-ETL-Python/
+```text
+Pipeline-ETL-Python
 │
 ├── banco/
-│   └── empresa.db
+│   └── vendas.db
+│
+├── dashboard/
+│   ├── Dashboard_ETL.pbix
+│   ├── dashboard_visao_geral.png
+│   ├── dashboard_clientes.png
+│   ├── dashboard_produtos.png
+│   └── dashboard_tendencias.png
 │
 ├── dados/
 │   ├── clientes.xlsx
@@ -71,36 +73,71 @@ Pipeline-ETL-Python/
 ├── logs/
 │   └── pipeline.log
 │
-├── powerbi/
-│   ├── dashboard.pbix
-│   ├── dashboard.png
-│   └── dashboard.pdf
-│
 ├── relatorios/
-│   ├── relatorio.csv
-│   └── relatorio.xlsx
+│   ├── relatorio.xlsx
+│   └── resumo.csv
 │
 ├── scripts/
 │
-├── Dockerfile
-├── docker-compose.yml
 ├── config.py
 ├── main.py
+├── Dockerfile
 ├── requirements.txt
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-# ⚙️ Executando Localmente
+# 🔄 Fluxo do Pipeline
 
-Instale as dependências:
+```text
+Geração dos Dados
+        │
+        ▼
+Extração
+        │
+        ▼
+Validação
+        │
+        ▼
+Transformação
+        │
+        ▼
+Carga no SQLite
+        │
+        ▼
+Relatórios Excel
+        │
+        ▼
+Dashboard Power BI
+```
+
+---
+
+# 🚀 Como executar
+
+## Clone o projeto
+
+```bash
+git clone https://github.com/SEU-USUARIO/Pipeline-ETL-Python.git
+```
+
+```bash
+cd Pipeline-ETL-Python
+```
+
+---
+
+## Instale as dependências
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Execute:
+---
+
+## Execute
 
 ```bash
 python main.py
@@ -110,13 +147,13 @@ python main.py
 
 # 🐳 Executando com Docker
 
-Criar imagem:
+## Build
 
 ```bash
 docker build -t etl-python .
 ```
 
-Executar:
+## Run
 
 ```bash
 docker run --rm -v ${PWD}:/app etl-python
@@ -124,95 +161,109 @@ docker run --rm -v ${PWD}:/app etl-python
 
 ---
 
-# 📊 Dados Gerados
-
-O pipeline gera automaticamente:
-
-- Clientes (Excel)
-- Produtos (CSV)
-- Vendas (CSV)
-- Banco SQLite
-- Relatório CSV
-- Relatório Excel
-- Log de execução
-
----
-
 # 📈 Dashboard Power BI
 
-O projeto inclui um dashboard desenvolvido no Power BI utilizando os dados produzidos pelo pipeline ETL.
+O projeto possui um dashboard executivo dividido em quatro páginas.
 
-### Indicadores
+## 📊 Visão Geral
 
-- 💰 Receita Total
-- 📦 Produtos Mais Vendidos
-- 👥 Top Clientes
-- 🏙 Receita por Cidade
-- 📈 Evolução Mensal
-- 📊 Ticket Médio
+- Receita Total
+- Ticket Médio
+- Produtos Vendidos
+- Clientes Atendidos
+- Receita por Categoria
+- Receita por Cidade
+- Evolução das Vendas
 
-### Preview
-
-> Adicione aqui uma captura de tela do dashboard.
-
-```md
-![Dashboard](powerbi/dashboard.png)
-```
-
-Arquivos disponíveis:
-
-- `powerbi/dashboard.pbix`
-- `powerbi/dashboard.pdf`
+![](dashboard/dashboard_visao_geral.png)
 
 ---
 
-# 📌 Principais Funcionalidades
+## 👥 Clientes
+
+- Top 10 Clientes
+- Receita por Cidade
+- Ticket Médio por Cidade
+
+![](dashboard/dashboard_clientes.png)
+
+---
+
+## 📦 Produtos
+
+- Top 10 Produtos
+- Receita por Categoria
+- Quantidade Vendida por Categoria
+
+![](dashboard/dashboard_produtos.png)
+
+---
+
+## 📈 Tendências
+
+- Evolução Mensal
+- Receita Acumulada
+- Crescimento das Vendas
+
+![](dashboard/dashboard_tendencias.png)
+
+---
+
+# 📊 Indicadores
+
+O dashboard apresenta indicadores como:
+
+- Receita Total
+- Ticket Médio
+- Total de Vendas
+- Produtos Vendidos
+- Quantidade Vendida
+- Clientes Atendidos
+- Receita por Categoria
+- Receita por Cidade
+- Top Clientes
+- Top Produtos
+
+---
+
+# 💡 Principais funcionalidades
 
 ✔ Geração automática de dados
 
-✔ Processo ETL completo
-
-✔ Limpeza e transformação de dados
+✔ ETL completo
 
 ✔ Banco SQLite
 
-✔ Relatórios automáticos
+✔ Relatórios Excel
 
 ✔ Dashboard Power BI
 
-✔ Execução via Docker
+✔ Docker
 
-✔ Estrutura modular
+✔ Estrutura organizada
 
----
-
-# 🎯 Objetivo
-
-Demonstrar conhecimentos em:
-
-- Engenharia de Dados
-- ETL
-- Python
-- Pandas
-- Docker
-- Power BI
-- Modelagem de Dados
-- Git e GitHub
+✔ Projeto para portfólio
 
 ---
 
-# 🚀 Próximas Melhorias
+# 📸 Demonstração
 
-- PostgreSQL
-- Apache Airflow
-- API com FastAPI
-- Deploy em Azure
-- Deploy em AWS
-- Atualização automática do Power BI
-- Testes automatizados
+> Dashboard Executivo
+
+![](dashboard/dashboard_visao_geral.png)
+
+---
+
+# 📄 Licença
+
+Este projeto foi desenvolvido para fins educacionais e de portfólio.
 
 ---
 
 # 👨‍💻 Autor
 
-Desenvolvido por **Pablo Riquelme** como projeto de portfólio para a área de Dados.
+**Pablo Riquelme**
+
+GitHub: https://github.com/riquelmexs
+
+LinkedIn: https://www.linkedin.com/in/pablo-riquelme-ss/
