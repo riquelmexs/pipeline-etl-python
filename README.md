@@ -248,9 +248,9 @@ O dashboard apresenta indicadores como:
 
 # 📸 Demonstração
 
-> Dashboard Executivo
+## Dashboard Executivo
 
-![](dashboard/dashboard_visao_geral.png)
+![Dashboard Executivo](dashboard/dashboard_visao_geral.png)
 
 ---
 
